@@ -1,0 +1,7 @@
+<div>
+    <button *ngFor="let item of list; let i=index" [ngClass]="i % 2 == 0 ? 'primary' : 'secondary'" (click)="clickButton(item)">
+        {{item.name | uppercase}}
+    </button>
+</div>
+
+<list-detail [user]="selectedUser"></list-detail>

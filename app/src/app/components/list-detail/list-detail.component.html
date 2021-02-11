@@ -1,0 +1,21 @@
+<div *ngIf="user">
+    <div>
+        <label>Name</label>
+        <p><strong>{{user?.name | uppercase}}</strong></p>
+    </div>
+
+    <div>
+        <label>Gender</label>
+        <p><strong>{{user?.gender | uppercase}}</strong></p>
+    </div>
+
+    <div>
+        <label>Phone</label>
+        <p><strong>{{user?.phone}}</strong></p>
+    </div>
+
+    <div>
+        <label>E-mail</label>
+        <p><strong>{{user?.email | lowercase}}</strong></p>
+    </div>
+</div>
