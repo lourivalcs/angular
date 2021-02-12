@@ -1,18 +1,19 @@
 import { NgModule } from '@angular/core'
 import { BrowserModule } from '@angular/platform-browser'
-
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './views/'
 import {
   ListComponent,
-  ListDetailsComponent
+  ListDetailsComponent,
+  TableComponent
 } from './components'
 
 @NgModule({
   declarations: [
     AppComponent,
     ListComponent,
-    ListDetailsComponent
+    ListDetailsComponent,
+    TableComponent
   ],
   imports: [
     BrowserModule,

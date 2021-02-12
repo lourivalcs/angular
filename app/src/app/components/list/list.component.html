@@ -1,5 +1,5 @@
 <div>
-    <button *ngFor="let item of list; let i=index" [ngClass]="i % 2 == 0 ? 'primary' : 'secondary'" (click)="clickButton(item)">
+    <button *ngFor="let item of users; let i=index" [ngClass]="i % 2 == 0 ? 'primary' : 'secondary'" (click)="clickButton(item)">
         {{item.name | uppercase}}
     </button>
 </div>
