@@ -1,7 +1,7 @@
 <div *ngIf="user">
     <div>
         <label>Name</label>
-        <p><strong>{{user?.name | uppercase}}</strong></p>
+        <p><strong>{{user?.name?.first | uppercase}}</strong></p>
     </div>
 
     <div>

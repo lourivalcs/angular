@@ -10,7 +10,7 @@ import { MessageService, UserService } from '../../services'
 export class ListComponent implements OnInit {
 
   selectedUser?: IUser
-  users?: Array<IUser>
+  users: Array<IUser> = []
 
   constructor(private userService: UserService, private messageService: MessageService) { }
 
@@ -20,12 +20,10 @@ export class ListComponent implements OnInit {
 
   clickButton(user: IUser) {
     this.selectedUser = user
-    this.messageService.add(user.name)
+    this.messageService.add(user.name.first)
   }
 
-  findUsers(): void{
-    this.userService.getUsers().subscribe(users => this.users = users)
+  findUsers(): void {
+    this.userService.getUsers().subscribe(users => this.users = users.results)
   }
-
-
 }

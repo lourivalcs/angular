@@ -1,6 +1,6 @@
 <div>
-    <button *ngFor="let item of users; let i=index" [ngClass]="i % 2 == 0 ? 'primary' : 'secondary'" (click)="clickButton(item)">
-        {{item.name | uppercase}}
+    <button *ngFor="let item of this.users; let i=index" [ngClass]="i % 2 == 0 ? 'primary' : 'secondary'" (click)="clickButton(item)">
+        {{item.name.first | uppercase}}
     </button>
 </div>
 

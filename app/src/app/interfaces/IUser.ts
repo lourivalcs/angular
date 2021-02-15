@@ -1,5 +1,7 @@
 export interface IUser {
-    name: string,
+    name: {
+        first: string
+    },
     gender: string,
     phone: string,
     email: string
