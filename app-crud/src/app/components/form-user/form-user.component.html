@@ -1,0 +1,41 @@
+<div class="container">
+    <form class="form" [formGroup]="userForm" (ngSubmit)="sendUser()">
+        <mat-form-field class="input-default">
+            <mat-label>Name</mat-label>
+            <input matInput placeholder="Name" formControlName="name" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-default">
+            <mat-label>Age</mat-label>
+            <input matInput placeholder="Age" formControlName="age" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-default">
+            <mat-label>Gender</mat-label>
+            <input matInput placeholder="Gender" formControlName="gender" required>
+        </mat-form-field>
+
+        <mat-form-field class="input-default">
+            <mat-label>E-mail</mat-label>
+            <input matInput placeholder="E-mail" formControlName="email" required>
+        </mat-form-field>
+
+        <div formGroupName="address">
+            <mat-form-field class="input-default">
+                <mat-label>Street Address</mat-label>
+                <input matInput placeholder="Street Address" formControlName="streetAddress" required>
+            </mat-form-field>
+
+            <mat-form-field class="input-default">
+                <mat-label>City</mat-label>
+                <input matInput placeholder="City" formControlName="city" required>
+            </mat-form-field>
+
+            <mat-form-field class="input-default">
+                <mat-label>State</mat-label>
+                <input matInput placeholder="State" formControlName="state" required>
+            </mat-form-field>
+        </div>
+        <button type="submit" [disabled]="!userForm.valid">Send</button>
+    </form>
+</div>
